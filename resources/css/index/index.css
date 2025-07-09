@@ -1,0 +1,48 @@
+.terminal {
+    background-color: #222;
+    color: #33ff33;
+    font-family: 'Fira Mono', 'Consolas', monospace;
+    padding: 2rem;
+    border-radius: 0.6rem;
+    width: 60%;
+    margin: 1rem auto;
+    box-shadow: 0 0.1rem 1.2rem #0008;
+}
+
+.terminal-line {
+    margin-bottom: 1rem;
+    display: flex;
+}
+
+.terminal-line span:nth-of-type(1) {
+    color: #6cf;
+}
+
+.terminal-line span:nth-of-type(2) {
+    color: #fc6;
+}
+
+.terminal-line span:nth-of-type(3) {
+    color: #6cf;
+}
+
+.terminal-line span:nth-of-type(4) {
+    color: #fff;
+    margin-left: 3px;
+}
+
+.terminal-output {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.terminal-input {
+    background-color: #222;
+    color: #33ff33;
+    border: 1px solid #222;
+    font-family: inherit;
+    margin-left: 3px;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+}
