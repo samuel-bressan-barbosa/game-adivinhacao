@@ -1,0 +1,17 @@
+.game-name {
+    font-family: "Share Tech", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    color: white;
+    margin: 0;
+}
+
+.game-difficulty {
+    font-family: "Share Tech Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    color: white;
+    margin: 0;
+}
