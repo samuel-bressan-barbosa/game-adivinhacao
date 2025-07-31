@@ -12,4 +12,18 @@ class ClassicController extends Controller
             "dificuldade" => $dificuldade
         ]);
     }
+
+    function image(Request $request){
+        $dificuldade = $request->dificuldade;
+        $tentativas = $request->attempts ?? 0;
+
+        $caminho = storage_path("app/public/images.png");
+
+        if (!file_exists(filename: $caminho)) {
+            abort(404, "Imagem não encontrada.");
+        }
+
+        echo "Deu certo";
+
+    }
 }
