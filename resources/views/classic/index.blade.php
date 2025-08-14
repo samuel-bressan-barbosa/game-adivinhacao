@@ -22,6 +22,8 @@
             <p class="game-difficulty">{{ $dificuldade }}</p>
         </div>
     </div>
+
+    <img id="guess-image" class="img-portrait" alt="Imagem a ser adivinhada"/>
 </body>
 
 </html>
