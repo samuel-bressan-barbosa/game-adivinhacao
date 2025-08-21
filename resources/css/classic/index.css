@@ -1,17 +1,94 @@
-.game-name {
-    font-family: "Share Tech", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+.game-mode {
+    font-family: 'Share Tech Mono', monospace;
     text-align: center;
-    color: white;
     margin: 0;
+    color: white;
 }
 
 .game-difficulty {
-    font-family: "Share Tech Mono", monospace;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-    color: white;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.8rem;
+    color: whitesmoke;
     margin: 0;
+    text-align: center;
+    text-decoration: underline;
 }
+
+.game-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.img-portrait {
+    max-width: 30rem;
+    max-height: 30rem;
+    border: 0.2rem solid green;
+    border-radius: 1rem;
+}
+
+.vidas {
+    text-align: center;
+    font-size: 2rem;
+    color:  palevioletred;
+}
+
+.container-select {
+    width: 20rem;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.btn-tech {
+    background: linear-gradient(90deg, #00f2ff, #008cff);
+    color: #fff;
+    border: 2px solid #00f2ff;
+    border-radius: 12px;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px #00f2ff, 0 0 20px #008cff inset;
+  }
+
+  .btn-tech::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+      from 0deg,
+      transparent,
+      rgba(0, 242, 255, 0.6),
+      transparent 30%
+    );
+    animation: rotate 4s linear infinite;
+  }
+
+  .btn-tech:hover {
+    background: linear-gradient(90deg, #008cff, #00f2ff);
+    box-shadow: 0 0 15px #00f2ff, 0 0 30px #008cff;
+    transform: scale(1.05);
+  }
+
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }

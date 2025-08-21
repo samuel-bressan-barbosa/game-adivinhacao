@@ -2,22 +2,34 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tecnologia;
 use Illuminate\Http\Request;
 
 class ClassicController extends Controller
 {
     function index(string $dificuldade)
     {
+        $tecnologias = Tecnologia::all();
+
+        $random = rand(0, $tecnologias->count() - 1);
+        $primeiraTecnologia = $tecnologias
+        ->skip($random)->take(1);
+
         return view("classic/index", [
-            "dificuldade" => $dificuldade
+            "dificuldade" => $dificuldade,
+            "tecnologias" => $tecnologias,
+            'tecnologia' => $primeiraTecnologia->first()->id
         ]);
     }
 
     function image(Request $request){
         $dificuldade = $request->dificuldade;
-        $tentativas = $request->attempts ?? 0;
+        $tentativas = $request->tentativas ?? 0;
+        $imagemId = $request->tecnologia;
 
-        $caminho = storage_path("app/public/teste3.png");
+        $tecnologia = Tecnologia::find($imagemId);
+
+        $caminho = storage_path("app/public/" . $tecnologia->caminho_logo);
 
         if (!file_exists(filename: $caminho)) {
             abort(404, "Imagem não encontrada.");
