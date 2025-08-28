@@ -48,7 +48,7 @@
                 <div class="container-select">
                     <select id="slim-select">
                         @foreach ($tecnologias as $tec)
-                            <option value="{{ $tec->id }}">{{ $tec->nome }}</option>
+                            <option value="{{ $tec->codigo }}">{{ $tec->nome }}</option>
                         @endforeach
                     </select>
                 </div>

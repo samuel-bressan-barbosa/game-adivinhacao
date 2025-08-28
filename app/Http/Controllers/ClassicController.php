@@ -122,9 +122,7 @@ class ClassicController extends Controller
         $base64 = 'data:' . $contentType . ';base64,' . base64_encode($conteudoImagem);
         return response()->json([
             "image" => $base64,
-            "dificuldade" => "teste",
-            "resposta" => "a",
-            "vidas" => "a"
+            "codigo" => $tecnologia->codigo,
         ]);
     }
 }

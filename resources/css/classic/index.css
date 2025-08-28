@@ -34,6 +34,10 @@
     color:  palevioletred;
 }
 
+.perdida {
+    color: black;
+}
+
 .container-select {
     width: 20rem;
 }
